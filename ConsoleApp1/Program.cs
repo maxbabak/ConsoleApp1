@@ -1,61 +1,69 @@
-﻿using ConsoleApp1.Entities;
+﻿using ConsoleApp1.DAL;
+using ConsoleApp1.Entities;
+using ConsoleApp1.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.ComponentModel.Design;
+
 namespace ConsoleApp1
 {
-    internal class Program 
+    internal class Program
     {
         static void Main(string[] args)
         {
-            var context = new AppDbContext();
-            bool running = true;
+            var start = new MenuService();
 
-            while (running)
+            while (true)
             {
-                Console.WriteLine("переглянути всіх студентів");
-                Console.WriteLine("додати студента");
-                Console.WriteLine("видалити студента");
-                Console.WriteLine("знайти студента");
+                //  case "1":
+                //    var students = context.Students.ToList();
+                //    foreach (var student in students)
+                //    {
+                //        Console.WriteLine($"Name: {student.Name} \t Description: {student.Description}");
+                //    }
+                //    break;
+                //case "2":
+                //    Console.Write("Введіть ім'я студента: ");
+                //    string name = Console.ReadLine();
+                //    Console.Write("Введіть опис студента: ");
+                //    string description = Console.ReadLine();
 
-                string choice = Console.ReadLine();
-                switch (choice)
-                {
-                    case "1":
-                        var students = context.Students.ToList();
-                        foreach (var student in students)
-                        {
-                            Console.WriteLine($"ID: {student.Id} | name: {student.Name} \t description: {student.Description}");
-                        }
-                        break;
+                //    var newStudent = new Student { Name = name, Description = description };
+                //    context.Students.Add(newStudent);
+                //    context.SaveChanges();
+                //    Console.WriteLine("Студент доданий успішно!");
+                //    break;
+                //case "3":
+                //    Console.Write("Введіть ID студента, якого хочете видалити: ");
+                //    if (int.TryParse(Console.ReadLine(), out int id))
+                //    {
+                //        var studentToRemove = context.Students.Find(id);
+                //        if (studentToRemove != null)
+                //        {
+                //            context.Students.Remove(studentToRemove);
+                //            context.SaveChanges();
+                //            Console.WriteLine("Студента видалено успішно!");
+                //        }
+                //        else
+                //        {
+                //            Console.WriteLine("Студента з таким ID не знайдено!");
+                //        }
+                //    }
+                //    else
+                //    {
+                //        Console.WriteLine("Некоректний ID!");
+                //    }
+                //    break;
+                //case "4":
+                //    running = false;
+                //    break;
+                //default:
+                //    Console.WriteLine("Некоректний вибір! Спробуйте ще раз.");
+                //    break;
+                //}
+                start.Menu();
 
-                    case "2":
-                        Console.Write("введіть студента: ");
-                        string name = Console.ReadLine();
-                        Console.Write("введіть студента2: ");
-                        string description = Console.ReadLine();
-
-                        var newStudent = new Student { Name = name, Description = description };
-                        context.Students.Add(newStudent);
-                        context.SaveChanges();
-                        break;
-
-                    case "3":
-                        Console.Write("введіть ID студента, якого хочете видалити: ");
-
-                        //var studentToRemove = context.Students.Find(id);
-                        //        context.Students.Remove(studentToRemove);
-                        //        context.SaveChanges();
-
-
-                        break;
-                    case "4":
-                        //Console.Write("студента для пошуку: ");
-
-                        break;
-
-                }
             }
         }
     }
 }
+

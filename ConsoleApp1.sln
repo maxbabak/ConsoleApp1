@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{28E19A25-7CEB-42A8-BC4B-78EF73FD4529}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{28E19A25-7CEB-42A8-BC4B-78EF73FD4529}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1.DAL", "ClassLibrary1.DAL\ClassLibrary1.DAL.csproj", "{7786D207-62CC-449F-91AE-581362F6D25C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1.DAL", "ClassLibrary1.DAL\ConsoleApp1.DAL.csproj", "{7786D207-62CC-449F-91AE-581362F6D25C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
